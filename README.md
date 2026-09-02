@@ -91,12 +91,19 @@ Evaluation Failures: 16% (8 Cases)
 
 ```text
 ├── docs/
-│   ├── PRD.md                  # Comprehensive Product Requirements Document
-│   └── product_discovery.md    # JTBD, Personas, and Competitor Benchmark
+│   ├── PRD.md                  # ChatPRD-aligned Product Requirements Document
+│   ├── product_discovery.md    # Personas, JTBD, and Competitive Landscape
+│   └── eval_report.md          # In-depth 50-case benchmark & failure mode report
 ├── tests/
-│   ├── eval_dataset.json       # 50-case Golden Evaluation Dataset
-│   └── test_eval.py            # Automated evaluation runner & scoring harness
+│   ├── eval_dataset.json       # 50-case Golden Evaluation Matrix (Happy, Edge, Adversarial)
+│   └── test_eval.py            # Automated evaluation runner & multi-dimensional scoring harness
 ├── app/
-│   ├── services/               # RAG pipeline, tool calling, and auth logic
-│   └── config.py               # Local Ollama & model configuration
-└── README.md                   # Product Case Study & Evaluation Overview
+│   ├── services/
+│   │   ├── chatbot_service.py  # Orchestrator & prompt guardrail enforcement
+│   │   ├── rag_service.py      # In-memory vector search & retrieval engine
+│   │   └── booking_service.py  # Deterministic tool calling & session authorization (IDOR check)
+│   └── config.py               # Local Ollama & model parameters
+├── .gitignore
+├── requirements.txt
+└── README.md                   # Portfolio Case Study & Executive Summary
+```
