@@ -1,5 +1,5 @@
 # SkyJet AI: 50-Case Evaluation & Trust Benchmark Suite
-> **A Production-Grade AI PM Framework: Rigorous Offline Evaluation, Failure Mode Taxonomy, and Adversarial Stress-Testing on an On-Premise SLM.**
+> **A Production-Grade AI PM Framework: Rigorous Offline Evaluation, Failure Mode Taxonomy and Adversarial Stress-Testing on an On-Premise SLM.**
 
 [![Status](https://img.shields.io/badge/Status-Eval%20Completed-brightgreen)](#)
 [![Model](https://img.shields.io/badge/Target%20Model-Qwen%201.7B%20(Ollama)-blue)](#)
