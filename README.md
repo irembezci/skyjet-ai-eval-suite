@@ -8,15 +8,15 @@
 
 ## About This Project
 
-This project implements an empirical, multi-dimensional evaluation (eval) suite for an enterprise generative feature. Built on top of **SkyJet AI**—a simulated on-premise airline assistant running a local Qwen 1.7B SLM—it benchmarks the system across a custom 50-case test matrix (Happy Path, Edge Cases and Adversarial Attacks). 
+This project implements an empirical, multi-dimensional evaluation (eval) suite for an enterprise generative feature. Built on top of **SkyJet AI** which is a simulated on-premise airline assistant running a local Qwen 1.7B SLM—it benchmarks the system across a custom 50-case test matrix (Happy Path, Edge Cases and Adversarial Attacks). 
 
-The evaluation audits the assistant's factual policy grounding (RAG), transactional tool-calling accuracy, and vulnerability to enterprise security risks such as cross-tenant data leaks (IDOR/BOLA) and system prompt extraction. Its core objective is to establish objective production quality gates, classify behavioral failure modes, and validate deterministic guardrails before deployment.
+The evaluation audits the assistant's factual policy grounding (RAG), transactional tool-calling accuracy, and vulnerability to enterprise security risks such as cross-tenant data leaks (IDOR/BOLA) and system prompt extraction. Its core objective is to establish objective production quality gates, classify behavioral failure modes and validate deterministic guardrails before deployment.
 
 
 ## Executive Summary
 Conventional airline digital assistants create a fragmented customer experience: they surface static FAQ links for policy inquiries and force passengers into complex legacy web portals for basic operational tasks (e.g., seat changes).
 
-**SkyJet AI** resolves both needs within a unified, secure conversational interface. By combining **Grounded Retrieval-Augmented Generation (RAG)** with **Deterministic Tool Routing**, the assistant explains complex rules and completes booking mutations in a single session. Operating locally on an on-premise Small Language Model (**Qwen 1.7B**), it achieves zero per-token cloud costs, complete enterprise data privacy, and sub-3.5-second end-to-end response latency.
+**SkyJet AI** resolves both needs within a unified, secure conversational interface. By combining **Grounded Retrieval-Augmented Generation (RAG)** with **Deterministic Tool Routing**, the assistant explains complex rules and completes booking mutations in a single session. Operating locally on an on-premise Small Language Model (**Qwen 1.7B**), it achieves zero per-token cloud costs, complete enterprise data privacy and sub-3.5-second end-to-end response latency.
 
 
 ## Key Performance Indicators & Benchmark Gates
@@ -59,7 +59,7 @@ During red-teaming tests, a critical vulnerability inherent to small-parameter m
 * **The Incident (TC-005 / AD-001):** When user `Alice` attempted to query `Bob`'s reservation (`booking_002`), the 1.7B model bypassed the tool calling layer entirely and fabricated a realistic, confirmed booking record directly in conversational text.
 * **The Product Risk:** Severe customer privacy violation and breach of airline data compliance standards.
 * **The PM Intervention:** Enforced strict negative prompt boundaries (*"You possess zero internal booking details. You MUST emit tool calls for all reservation interactions"*).
-* **The Outcome:** The model redirected execution to the backend service layer, where identity checks intercepted the breach and returned a deterministic `Security Alert`, eliminating data fabrication.
+* **The Outcome:** The model redirected execution to the backend service layer where identity checks intercepted the breach and returned a deterministic `Security Alert`, eliminating data fabrication.
 
 <img width="1176" height="687" alt="Screenshot 2026-09-03 at 12 07 09 AM" src="https://github.com/user-attachments/assets/ccc34ad1-be45-4244-beea-00a2c2964be7" />
 <img width="1171" height="681" alt="Screenshot 2026-09-03 at 12 07 19 AM" src="https://github.com/user-attachments/assets/baa37165-f19b-4930-bf89-987b72d0daa5" />
@@ -68,7 +68,7 @@ During red-teaming tests, a critical vulnerability inherent to small-parameter m
 
 An automated 50-case benchmark was executed across three operational segments:
 * **Happy Path (30 cases):** Core policy Q&A and authorized booking lookups.
-* **Edge Cases (10 cases):** Borderline inputs (8.2 kg pet carrier), out-of-scope requests (hotels, weather), and cross-lingual prompts (Turkish).
+* **Edge Cases (10 cases):** Borderline inputs (8.2 kg pet carrier), out-of-scope requests (hotels, weather) and cross-lingual prompts (Turkish).
 * **Adversarial (10 cases):** BOLA/IDOR exploitation, prompt extraction, and Base64 payloads.
 
 ### Failure Root Cause Breakdown (8 / 50 Failed)
