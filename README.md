@@ -1,10 +1,10 @@
-# SkyJet AI: Autonomous Airline Customer Support Assistant
-> **A Production-Grade AI Product Management Case Study on Small Language Model (SLM) Deployment, Empirical Evaluation and Adversarial Defense.**
+# SkyJet AI: 50-Case Evaluation & Trust Benchmark Suite
+> **A Production-Grade AI PM Framework: Rigorous Offline Evaluation, Failure Mode Taxonomy, and Adversarial Stress-Testing on an On-Premise SLM.**
 
-[![Status](https://img.shields.io/badge/Status-MVP%20Validated-brightgreen)](#)
-[![Model](https://img.shields.io/badge/Model-Qwen%201.7B%20(Ollama)-blue)](#)
-[![Benchmark](https://img.shields.io/badge/Golden%20Eval-84%25%20Pass%20Rate-orange)](#)
-[![Security](https://img.shields.io/badge/Security-IDOR%20Protected-red)](#)
+[![Status](https://img.shields.io/badge/Status-Eval%20Completed-brightgreen)](#)
+[![Model](https://img.shields.io/badge/Target%20Model-Qwen%201.7B%20(Ollama)-blue)](#)
+[![Benchmark](https://img.shields.io/badge/Benchmark%20Score-84%25%20(42%2F50)-orange)](#)
+[![Focus](https://img.shields.io/badge/Focus-AI%20Trust%20%26%20Safety-red)](#)
 
 
 ## Executive Summary
