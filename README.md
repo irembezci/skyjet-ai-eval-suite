@@ -6,6 +6,12 @@
 [![Benchmark](https://img.shields.io/badge/Benchmark%20Score-84%25%20(42%2F50)-orange)](#)
 [![Focus](https://img.shields.io/badge/Focus-AI%20Trust%20%26%20Safety-red)](#)
 
+## About This Project
+
+This project implements an empirical, multi-dimensional evaluation (eval) suite for an enterprise generative feature. Built on top of **SkyJet AI**—a simulated on-premise airline assistant running a local Qwen 1.7B SLM—it benchmarks the system across a custom 50-case test matrix (Happy Path, Edge Cases and Adversarial Attacks). 
+
+The evaluation audits the assistant's factual policy grounding (RAG), transactional tool-calling accuracy, and vulnerability to enterprise security risks such as cross-tenant data leaks (IDOR/BOLA) and system prompt extraction. Its core objective is to establish objective production quality gates, classify behavioral failure modes, and validate deterministic guardrails before deployment.
+
 
 ## Executive Summary
 Conventional airline digital assistants create a fragmented customer experience: they surface static FAQ links for policy inquiries and force passengers into complex legacy web portals for basic operational tasks (e.g., seat changes).
