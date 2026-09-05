@@ -83,3 +83,9 @@ The system prompt MUST explicitly enforce:
 
 ### NFR-2: Output Sanitization Middleware
 Before any text is surfaced to the client, an output filter must inspect responses for accidental leakage of system instructions or raw template tokens.
+
+
+## 5. Verification & Acceptance
+* **Benchmark Harness:** Validated via automated test runner (`tests/test_eval.py`).
+* **Test Results:** 42/50 passing cases (84% production readiness score).
+* **Known Limitations & Backlog:** Dynamic fallback gate (<0.70 threshold) prioritized for Sprint Alpha.2 to resolve out-of-corpus hallucinations.
